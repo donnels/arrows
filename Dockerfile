@@ -4,6 +4,7 @@ LABEL MAINTAINER Sean Donnellan <github@donnellan.de>
 WORKDIR /opt/app
 	# install the required additional packages
 	# && clean up after apt to reduce space used.
+        RUN mkdir -p /usr/share/man/man1
 		RUN apt-get update \
 			&& apt-get upgrade -y \
 			&& apt-get install -y --no-install-recommends \
